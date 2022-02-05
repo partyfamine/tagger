@@ -97,7 +97,8 @@ func trackData(cmd *cobra.Command, args []string) {
 				songFile.AddTextFrame(songFile.CommonID("Track number/Position in set"), songFile.DefaultEncoding(), fmt.Sprintf("%d/%d", i+1, len(album.TrackNames)))
 
 				if err = songFile.Save(); err != nil {
-					log.Fatal("Error while saving a tag: ", err)
+					fmt.Printf("Error while saving a tag: %s\n", err.Error())
+					break
 				}
 			}
 		}
