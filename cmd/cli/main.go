@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/partyfamine/tagger/cmd"
+	"github.com/partyfamine/tagger/cmd/cli/update"
 	"github.com/spf13/cobra"
 )
 
@@ -12,7 +12,7 @@ var root = &cobra.Command{
 }
 
 func init() {
-	root.AddCommand(cmd.Update)
+	root.AddCommand(update.Update)
 }
 
 func main() {
