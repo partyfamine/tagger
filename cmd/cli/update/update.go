@@ -1,7 +1,6 @@
 package update
 
 import (
-	"github.com/partyfamine/tagger/cmd/update"
 	"github.com/spf13/cobra"
 )
 
@@ -12,6 +11,6 @@ var Update = &cobra.Command{
 }
 
 func init() {
-	Update.AddCommand(update.TrackData)
-	Update.AddCommand(update.FileNames)
+	Update.AddCommand(TrackData)
+	Update.AddCommand(FileNames)
 }
