@@ -1,0 +1,19 @@
+{
+    "name": "RYM MP3 Tagger",
+    "description": "sets mp3 tags using rym",
+    "version": "1.0",
+    "manifest_version": 2,
+    "browser_action": {
+      "default_title": "click to download metadata"
+    },
+    "permissions": [
+        "scripting",
+        "tabs",
+        "activeTab",
+        "downloads",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "host_permissions": ["http://*/*","https://*/*"],
+    "background": {"scripts": ["background.js"], "persistent": false}
+}
