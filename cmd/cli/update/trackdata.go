@@ -87,7 +87,9 @@ func trackData(cmd *cobra.Command, args []string) {
 				if err != nil {
 					log.Fatal("error opening file", err)
 				}
+				defer songFile.Close()
 
+				songFile.SetDefaultEncoding(id3v2.EncodingUTF16)
 				songFile.SetAlbum(album.Name)
 				songFile.SetArtist(album.Artist)
 				songFile.AddTextFrame(songFile.CommonID("Band/Orchestra/Accompaniment"), songFile.DefaultEncoding(), album.Artist)
