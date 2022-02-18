@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/partyfamine/tagger/cmd/cli/generate"
+	"github.com/partyfamine/tagger/cmd/cli/list"
 	"github.com/partyfamine/tagger/cmd/cli/update"
 	"github.com/spf13/cobra"
 )
@@ -15,6 +16,7 @@ var root = &cobra.Command{
 func init() {
 	root.AddCommand(update.Update)
 	root.AddCommand(generate.Generate)
+	root.AddCommand(list.List)
 }
 
 func main() {
