@@ -64,8 +64,8 @@ github.com/beorn7/perks v0.0.0-20180321164747-3a771d992973/go.mod h1:Dwedo/Wpr24
 github.com/beorn7/perks v1.0.0/go.mod h1:KWe93zE9D1o94FZ5RNwFwVgaQK1VOXiVxmqh+CedLV8=
 github.com/beorn7/perks v1.0.1/go.mod h1:G2ZrVWU2WbWT9wwq4/hrbKbnv/1ERSJQ0ibhJ6rlkpw=
 github.com/bgentry/speakeasy v0.1.0/go.mod h1:+zsyZBPWlz7T6j88CTgSN5bM796AkVf0kBD4zp0CCIs=
-github.com/bogem/id3v2/v2 v2.1.2 h1:++1bbBfveCXdH8ep/Tuecua5BzHgljPL0c/msnAOO64=
-github.com/bogem/id3v2/v2 v2.1.2/go.mod h1:hVfgiLdvXyAPqnCc3+CbdEvAv7uOkYn6a/rVpHmABmg=
+github.com/bogem/id3v2 v1.1.1 h1:FnjS2vytMeEb39tOMG09uz852MaEccA2A3asRM3XxbE=
+github.com/bogem/id3v2 v1.1.1/go.mod h1:D1rDm80qF/ocBU+Ik8U4RKnwMq/oNkkB8vGcnrlMJmM=
 github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod h1:f6KPmirojxKA12rnyqOA5BBL4O983OfeGPqjHWSTneU=
 github.com/census-instrumentation/opencensus-proto v0.3.0/go.mod h1:f6KPmirojxKA12rnyqOA5BBL4O983OfeGPqjHWSTneU=
 github.com/cespare/xxhash v1.1.0/go.mod h1:XrSqR1VqqWfGrhpAt58auRo0WTKS1nRRg3ghfAqPWnc=
