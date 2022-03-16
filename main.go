@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/partyfamine/tagger/cmd/cli/generate"
-	"github.com/partyfamine/tagger/cmd/cli/list"
-	"github.com/partyfamine/tagger/cmd/cli/update"
+	"github.com/partyfamine/tagger/generate"
+	"github.com/partyfamine/tagger/list"
+	"github.com/partyfamine/tagger/update"
 	"github.com/spf13/cobra"
 )
 

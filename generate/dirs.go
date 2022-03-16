@@ -7,7 +7,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/partyfamine/tagger/cmd/cli/data"
+	"github.com/partyfamine/tagger/data"
 	"github.com/spf13/cobra"
 )
 
