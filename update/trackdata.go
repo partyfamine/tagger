@@ -7,7 +7,7 @@ import (
 	"log"
 	"path/filepath"
 
-	"github.com/bogem/id3v2"
+	"github.com/bogem/id3v2/v2"
 	"github.com/partyfamine/tagger/data"
 	"github.com/spf13/cobra"
 )
