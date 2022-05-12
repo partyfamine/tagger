@@ -27,7 +27,6 @@ func init() {
 	Dirs.Flags().StringVarP(&dataFile, "file", "f", "", "file containing album data in json format")
 	Dirs.Flags().StringVarP(&rootDir, "directory", "d", "", "root directory to generate directories")
 	Dirs.MarkFlagRequired("file")
-	Dirs.MarkFlagRequired("directory")
 }
 
 func dirs(cmd *cobra.Command, args []string) {
@@ -39,6 +38,13 @@ func dirs(cmd *cobra.Command, args []string) {
 	albums := make(map[string]data.Album)
 	if err := json.Unmarshal(fileBytes, &albums); err != nil {
 		log.Fatal(err)
+	}
+
+	if rootDir == "" {
+		rootDir, err = os.Getwd()
+		if err != nil {
+			log.Fatal(err)
+		}
 	}
 
 	for _, album := range albums {

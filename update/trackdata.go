@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"os"
 	"path/filepath"
 
 	"github.com/bogem/id3v2/v2"
@@ -28,7 +29,6 @@ func init() {
 	TrackData.Flags().StringVarP(&dataFile, "file", "f", "", "file containing track data in json format")
 	TrackData.Flags().StringVarP(&dirName, "directory", "d", "", "directory containing music files")
 	TrackData.MarkFlagRequired("file")
-	TrackData.MarkFlagRequired("directory")
 }
 
 func trackData(cmd *cobra.Command, args []string) {
@@ -40,6 +40,13 @@ func trackData(cmd *cobra.Command, args []string) {
 	albums := make(map[string]data.Album)
 	if err := json.Unmarshal(fileBytes, &albums); err != nil {
 		log.Fatal(err)
+	}
+
+	if dirName == "" {
+		dirName, err = os.Getwd()
+		if err != nil {
+			log.Fatal(err)
+		}
 	}
 
 	files, err := ioutil.ReadDir(dirName)

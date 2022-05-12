@@ -24,10 +24,16 @@ var renameDir string
 
 func init() {
 	FileNames.Flags().StringVarP(&renameDir, "directory", "d", "", "directory containing music files to rename")
-	FileNames.MarkFlagRequired("directory")
 }
 
 func fileNames(cmd *cobra.Command, args []string) {
+	if renameDir == "" {
+		wd, err := os.Getwd()
+		if err != nil {
+			log.Fatal(err)
+		}
+		renameDir = wd
+	}
 	songDirs := findSongDirs(renameDir)
 
 	for _, dir := range songDirs {
